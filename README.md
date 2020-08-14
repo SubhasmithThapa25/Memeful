@@ -5,6 +5,7 @@ Moreover this project holds an example of:
      * Android Architecture Components (ViewModel and LiveData)
      * Rest API calls using Retrofit libray 
      * Building Android Custom Views 
+     * Android X
      
 # Android Paging library
 The paging library makes it easier for your app to gradually load information as needed from a data source, 

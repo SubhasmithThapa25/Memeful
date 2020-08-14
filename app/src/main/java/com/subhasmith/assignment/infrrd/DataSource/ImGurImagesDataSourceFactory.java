@@ -16,7 +16,7 @@ import java.util.concurrent.Executor;
 
 public class ImGurImagesDataSourceFactory extends DataSource.Factory {
     private static final String TAG = "ImGurImagesDataSour";
-    ImGurImagesDataSource moviesDataSource;
+    ImGurImagesDataSource imGurImagesDataSource;
     MutableLiveData<ImGurImagesDataSource> mutableLiveData;
     Executor executor;
     TMDBWebService webService;
@@ -31,9 +31,9 @@ public class ImGurImagesDataSourceFactory extends DataSource.Factory {
     @Override
     public DataSource create() {
         Log.d(TAG, "create: ");
-        moviesDataSource = new ImGurImagesDataSource(executor, webService);
-        mutableLiveData.postValue(moviesDataSource);
-        return moviesDataSource;
+        imGurImagesDataSource = new ImGurImagesDataSource(executor, webService);
+        mutableLiveData.postValue(imGurImagesDataSource);
+        return imGurImagesDataSource;
     }
 
     public MutableLiveData<ImGurImagesDataSource> getMutableLiveData() {

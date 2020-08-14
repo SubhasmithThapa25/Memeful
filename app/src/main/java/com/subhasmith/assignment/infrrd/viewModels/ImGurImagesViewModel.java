@@ -33,7 +33,7 @@ public class ImGurImagesViewModel extends ViewModel {
 
 
     public ImGurImagesViewModel() {
-        Log.d(TAG, "MoviesInTheaterViewModel: ");
+        Log.d(TAG, "ImagesInViewModel: ");
         executor = Executors.newFixedThreadPool(5);
         TMDBWebService webService = ServiceGenerator.createService(TMDBWebService.class);
         ImGurImagesDataSourceFactory factory = new ImGurImagesDataSourceFactory(executor, webService);
@@ -59,7 +59,7 @@ public class ImGurImagesViewModel extends ViewModel {
     }
 
     public LiveData<PagedList<Datum>> getPagedListLiveData() {
-        Log.d(TAG, "getMoviesInTheaterList: ");
+        Log.d(TAG, "getImageInList: ");
         return pagedListLiveData;
     }
 

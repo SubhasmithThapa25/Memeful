@@ -22,7 +22,7 @@ import com.subhasmith.assignment.infrrd.viewModels.ImGurImagesViewModel;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
-    private ImGurImagesViewModel mMoviesViewModel;
+    private ImGurImagesViewModel imGurImagesViewModel;
     private RecyclerView mRecyclerView;
     private ImGurImagesAdapter adapter;
 
@@ -41,15 +41,15 @@ public class MainActivity extends AppCompatActivity {
 
         adapter = new ImGurImagesAdapter(this);
 
-        mMoviesViewModel = ViewModelProviders.of(this).get(ImGurImagesViewModel.class);
-        mMoviesViewModel.getPagedListLiveData().observe(this, new Observer<PagedList<Datum>>() {
+        imGurImagesViewModel = ViewModelProviders.of(this).get(ImGurImagesViewModel.class);
+        imGurImagesViewModel.getPagedListLiveData().observe(this, new Observer<PagedList<Datum>>() {
             @Override
-            public void onChanged(@Nullable PagedList<Datum> movies) {
-                Log.d(TAG, "onChanged: " + movies.size());
-                adapter.submitList(movies);
+            public void onChanged(@Nullable PagedList<Datum> datumPagedList) {
+                Log.d(TAG, "onChanged: " + datumPagedList.size());
+                adapter.submitList(datumPagedList);
             }
         });
-        mMoviesViewModel.getNetworkStateLiveData().observe(this, new Observer<NetworkState>() {
+        imGurImagesViewModel.getNetworkStateLiveData().observe(this, new Observer<NetworkState>() {
             @Override
             public void onChanged(@Nullable NetworkState networkState) {
                 Log.d(TAG, "onChanged: network state changed");

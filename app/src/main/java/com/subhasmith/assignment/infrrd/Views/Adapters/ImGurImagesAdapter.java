@@ -161,7 +161,6 @@ public class ImGurImagesAdapter extends PagedListAdapter<Datum, RecyclerView.Vie
             points = itemView.findViewById(R.id.points);
             imagePosterImageView = itemView.findViewById(R.id.image);
             llImage = itemView.findViewById(R.id.llImage);
-            //ratingBar = itemView.findViewById(R.id.movie_rating_bar);
         }
 
         @SuppressLint("SetTextI18n")

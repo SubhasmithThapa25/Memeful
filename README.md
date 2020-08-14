@@ -6,6 +6,7 @@ Moreover this project holds an example of:
      * Rest API calls using Retrofit libray 
      * Building Android Custom Views 
      * Android X
+     * Video Support to mp4 files in RecyclerView Items
      
 # Android Paging library
 The paging library makes it easier for your app to gradually load information as needed from a data source, 
@@ -26,4 +27,10 @@ to signal that a new item was inserted.
 
 
 The RecyclerView on the UI thread then knows that it only has to bind a single new item, and animate it appearing on screen.
+
+## Video Player in RecyclerView Items
+
+https://github.com/klinker24/Android-SimpleVideoView
+
+Used Andriod-SimpleVideoView to render videos on the RecyclerView Items. 
 
